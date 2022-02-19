@@ -7,9 +7,11 @@
   <body>
     <h1>Mesaje</h1>
     <!-- aca poner el mensaje que dice el entregable -->
-    <% if (typeof data != "undefined") {%>
-      <p>Hola <%=data.name%>, elegiste el color <%=data.color%>, tu email es: <%data.email%></p>
-    <%}%>
+    <% if (typeof data != "undefined") { %>
+      <p>Hola <%=data.name %>, elegiste el color: <%=data.color %>, tu email es: <%= data.email %>
+              <%= data.edad !='' ? 'y tu edad es:' + data.edad: null %>
+      </p>
+      <% } %>
     <div id="errores">
       <h2>Errores</h2>
     <!-- aca ponemos los errores del validator -->
